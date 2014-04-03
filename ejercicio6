@@ -1,0 +1,3 @@
+#!/bin/bash
+#Muestre únicamente el nombre de los usuarios conectados al sistema
+who |cut -d' ' -f1|sort|uniq
