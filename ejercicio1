@@ -1,0 +1,10 @@
+#!/bin/bash
+if test -d $1
+then
+echo "$1 es un directorio"
+elif test -f $1
+then
+echo "$1 es un archivo"
+else
+echo "el parametro no existe"
+fi
