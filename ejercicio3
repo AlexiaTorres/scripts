@@ -1,0 +1,3 @@
+#!/bin/bash
+#¿Cuántos archivos regulares hay en su directorio de trabajo?
+ls –l | grep "-" |wc -l

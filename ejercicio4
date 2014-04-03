@@ -1,0 +1,3 @@
+#!/bin/bash
+#¿Qué tamaño tiene el archivo de mayor tamaño de su directorio de trabajo?
+ls -l|cut -d' ' -f5|sort -r|head -1
