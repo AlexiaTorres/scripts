@@ -1,7 +1,0 @@
-#!/bin/bash
-#Buscar archivos con una determinada extensión que son pasados con #varios parámetros:
-$#
-for param in "$@"
-do
-find / -name *.param;
-done
