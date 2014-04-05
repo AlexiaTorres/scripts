@@ -1,0 +1,4 @@
+#!/bin/bash
+#muestre el nombre de los usuarios que no estan conectados al sistems
+
+echo $(cat /etc/passwd | cut -f1 -d':') $(who | cut -f1 -d' ') | tr -s ' ' '\n' | sort | uniq

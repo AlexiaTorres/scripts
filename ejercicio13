@@ -1,0 +1,11 @@
+#!/bin/bash
+#que el usuario introduzca numeros tantos como él quiera y eñabora una tabla de frecuencia ordenada de esos numeros
+
+IFS=','
+for line in $(echo $* | tr -s ' ' '\n' | sort -n | uniq -c | tr -s ' ' | tr '\n' ',')
+do
+frec=$(echo $line |cut -f2 -d' ')
+num=$(echo $line | cut -f3 -d' ')
+echo $num "-->" $frec
+done
+

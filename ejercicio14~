@@ -1,0 +1,17 @@
+#!/bin/bash
+#script que reciba rutas a archivos y q muestre sus propietarios, si algun archivo no existiera se informara del error y mno se mostrara por pantalla
+
+for path in $*
+do
+if test -f
+then
+users="$users\n"
+users="$users$(ls -l $path | cut -f3 -d' ')"
+done
+echo -e "$users" | sort | uniq
+
+
+
+
+
+

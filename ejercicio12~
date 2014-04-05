@@ -1,0 +1,10 @@
+#!/bin/bash
+#mostrar las lineas con la longitud minima en caracteres del archivo usuarios
+
+#echo -e "$(cat usuarios |xargs -I{} bash -c 'echo -n {}: ;echo {} | wc -c')" | sort -n -t: -k2| head -1 | cut -f2 -d:
+
+count=$(cat usuarios |xargs -I{} bash -c 'echo -n {}: ;echo {} | wc -c')
+min=$(echo -e "$count" | sort -n -t: -k2 | head -1 | cut -f2 -d:)
+echo -e "$count" | grep -E "^[^:]+$min$" | cut -f1 -d:
+
+

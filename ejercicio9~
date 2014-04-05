@@ -1,4 +1,4 @@
 #!/bin/bash
 #muestre en cuantos terminales está conectado cada usuario
 
-who | cut -f1 -d' ' | sort | uniq -c
+who | -f1 -d' ' | sort | uniq -c

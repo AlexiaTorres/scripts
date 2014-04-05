@@ -1,0 +1,4 @@
+#!/bin/bash
+#muestra el nombre del usuario mas largo
+cat /etc/passwd | cut -f1,2 -d: | xargs -I{} bash -c 'echo -n {} | wc -c' | sort -n -t: -k2 |tail -1 | cut -f1,2,3 -d: 
+
